@@ -282,6 +282,16 @@ form.sign-in-form {
     transition: 1s 0.8s ease-in-out;
   }
 
+  form{
+    position: relative;
+    top:-162px;
+  }
+
+  .title{
+    position: relative;
+    top: 15px;
+  }
+
   .signin-signup,
   .container.sign-up-mode .signin-signup {
     left: 50%;
@@ -376,8 +386,8 @@ form.sign-in-form {
 @media (max-width: 570px) {
   form {
     padding: 0 1.5rem;
-    
-    top: -190px;
+    position: relative;
+    top: -180px;
 
   }
 
