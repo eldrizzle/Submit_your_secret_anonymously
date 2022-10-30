@@ -30,7 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/letstestbaby", {useNewUrlParser: true , useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://rajat4661:Rajat1598@cluster0.ncboalk.mongodb.net/secrets", {useNewUrlParser: true , useUnifiedTopology:true});
 
 
 const userSchema = new mongoose.Schema ({
