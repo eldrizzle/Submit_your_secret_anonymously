@@ -30,7 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://rajat4661:Rajat1598@cluster0.ncboalk.mongodb.net/secrets", {useNewUrlParser: true , useUnifiedTopology:true});
+mongoose.connect("mongodb+srv://rajat4661:Rajat1598@cluster0.ncboalk.mongodb.net/secretslocalhost", {useNewUrlParser: true , useUnifiedTopology:true});
 
 
 const userSchema = new mongoose.Schema ({
@@ -60,6 +60,8 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
+    // https://secret-6o7z.onrender.com/secrets
+    // http://localhost:3000/secrets
     callbackURL: "http://localhost:3000/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
